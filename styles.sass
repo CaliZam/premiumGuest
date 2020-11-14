@@ -1,0 +1,598 @@
+@import ./variables
+
+*
+    padding: 0
+    margin: 0px
+    box-sizing: border-box
+
+.wrapper
+    display: flex
+    justify-content: center
+    flex-direction: column
+    align-items: center
+    background-color: $background-color
+    width: 100vw
+    
+.navbar
+    display: flex
+    width: 100%
+    height: 5vh
+    padding: 1vh
+    justify-content: space-between
+    align-items: center
+    &__left
+        display: flex
+        align-items: center
+        width: 40vw
+        justify-content: space-between
+        & > img
+            height: 2vh
+            width: auto
+            padding-left: 1vw
+        @include breakpoint(phone)
+            width: 90vw
+            & > img
+                height: 1.4em
+                padding-left: 4vw
+        
+    &__form 
+        display: flex
+        align-items: center
+        width: 30vw
+        justify-content: flex-end
+        margin-left: 10%
+        & > input
+            width: 25vw
+            background-color: #F7FAFF
+            border-style: none
+            outline: none
+            @include font()
+            @include breakpoint(phone)
+                width: 0vw
+                transition-duration: 1s
+                transition-timing-function: ease-out
+                &:focus
+                    width: 50vw
+                    transition-duration: 1s
+                    transition-timing-function: ease-in
+                    font-size: 7px
+                    background-color: #F7FAFF
+        & > img
+            width: 14px
+            height: 14px
+            margin-right: 5px
+            @include breakpoint(phone)
+                width: auto
+                height: 18px
+        @include breakpoint(phone)
+            width: 40vw
+            align-items: center
+            margin: 0
+        
+    &__right
+        width: 30vw
+        & > ul
+            display: flex
+            justify-content: space-between
+            align-items: center
+            width: 100%
+            & > li
+                list-style: none
+                & > a
+                    text-decoration: none
+                    @include font()
+                    color: $font-description-color
+                    font-size: 14px
+                    text-align: center
+                    display: flex
+                    align-items: center
+                    justify-content: space-between
+                    &:hover
+                        color: #6B75FF
+                    & > img
+                        height: 14px
+                        width: auto
+                        margin-right: 6px
+        & > input, label
+            display: none
+        @include breakpoint(phone)
+            width: 5vw
+            height: 5vw
+            display: flex
+            align-items: center
+            & > label   
+                font-size: 21px
+                color: #0009387F
+                display: flex
+                align-items: center
+            & > input:not(:checked)~ul
+                    display: none
+                    //TODO
+                    //transicion effect for menu
+                    // transition-duration: 1s
+                    // transition-timing-function: ease-out
+            & > input:checked~ul
+                    // transition-duration: 1s
+                    // transition-timing-function: linear
+                    display: flex
+                    flex-direction: column
+                    align-items: flex-end
+                    height: 0vh
+                    margin-top: 5vh
+                    z-index: 3
+                    padding-right: 15px
+                    & > li
+                        background-color: #F7FAFF
+                        width: 100px
+                        height: 30px
+                        display: flex
+                        justify-content: center
+                        align-items: center
+                        border-radius: 3px
+                        margin: 1px
+                        & > a > img
+                            display: none
+                        & > a:active
+                            color: #6B75FF
+         
+    
+.header
+    display: flex
+    justify-content: center
+    left: 0px   
+    width: 100vw   
+    height: 30%  
+    opacity: 1
+    & > img
+        width: 100%
+    @include breakpoint(phone)
+        display: none
+
+.content
+    display: flex
+    justify-content: center
+    align-items: center
+    flex-direction: column
+    width: 65%
+    box-shadow: 0px 3px 6px #6B75FF29
+    border-radius: 10px
+    opacity: 1
+    margin-top: -29%
+    background-color: #ffffff
+    margin-bottom: 3vh
+    @include breakpoint(phone)
+        margin-top: 0
+        margin-bottom: 0
+        width: 100%
+        background-color: $background-color
+    &__header
+        width: 100%
+        height: auto
+        @include breakpoint(phone)
+        overflow: hidden
+        & > img
+            height: 100%
+            width: 100%
+            @include breakpoint(phone)
+                width: 120%
+                object-fit: cover
+                object-position: -4em
+    &__event
+        display: flex
+        flex-direction: row
+        margin-top: 2vh
+        width: 90%
+        @include font()
+        &-logo
+            height: 66px
+            width: 99px
+            & > img
+                width: 100%
+                height: auto
+            @include breakpoint(phone)
+                display: none
+            
+        &-left
+            display: flex
+            flex-direction: column
+            width: 40%
+            & > h3
+                margin: 0
+                font-size: 18px
+            & > p
+                font-size: 14px
+                color: #0009387F
+                font-weight: 500
+                margin-top: 0.6rem
+        &-right
+            float: right
+            width: 45%
+            flex-direction: flex-end
+            text-align: right
+            & > p
+                font-size: 12px
+                margin-top: 0.6em
+            & > a
+                text-decoration: none
+                margin-top: 1em
+                color: #6B75FF
+                font-size: 12px
+                display: flex
+                align-items: center
+                justify-content: flex-end
+                & > img
+                    height: 12px
+                    width: 12px
+                    margin-right: 4px
+
+        @include breakpoint(phone)
+            flex-direction: column-reverse
+            width: 100%
+            display: flex
+            justify-content: center
+            align-items: center
+            margin-top: 0
+            &-right
+                display: flex
+                width: 88%
+                justify-content: space-between
+                align-items: flex-end
+                text-align: right
+                & > p
+                    padding-right: 10%
+            &-left
+                display: flex
+                width: 88%
+                align-items: flex-start
+                margin-top: 1vh
+                & > p
+                    margin: 0      
+    &__title
+        text-align: left
+        font: normal normal 600 16px/17px Poppins
+        letter-spacing: 0px
+        color: #000938
+        opacity: 0.8
+        display: inline-block
+        width: 87%
+        margin-top: 2rem
+        & > a
+            float: right
+            display: flex
+            align-items: center
+            text-decoration: none
+            color: $font-description-color
+            font-size: 10px
+            font-weight: 300
+            &:hover
+                color: #6B75FF
+            & > img
+                width: 10px
+                height: 10px
+    &__card
+        background: #FFFFFF
+        box-shadow: 0px 3px 6px #6B75FF29
+        border: 1px solid #F5F5F5
+        border-radius: 10px
+        opacity: 1
+        width: 85%
+        display: flex
+        justify-content: space-between
+        align-items: center
+        padding: 10px
+        position: relative
+        margin: 1vh
+        font-family: $font
+        &-left
+            width: 60%
+            user-select: none
+            & > h5,h6
+                opacity: 0.8
+            & > p
+                color: $font-description-color
+                font-size: 10px
+                @include font()
+            & > *
+                margin: 0.5vh   
+            & > h5
+                display: flex   
+                align-items: center         
+                & > p
+                    margin-left: 1vw 
+                    text-align: center
+                    letter-spacing: 0.42px
+                    color: #FF4141
+                    opacity: 1
+                    background: #FFDEDE 0% 0% no-repeat padding-box
+                    border-radius: 20px
+                    font-size: 10px    
+                    padding: 1px 8px 1px 8px     
+                    font-weight: 400  
+            & > h6
+                 @include font()
+                 font-size: 13px
+        &-left:before
+            content: ''
+            height: 100%
+            width: 5px
+            left: 0
+            top: 0
+            background-color: #6B75FF
+            border-radius: 8px 0px 0px 8px
+            opacity: 1
+            position: absolute
+
+        &-sold
+            font-family: $font
+            font-size: 10px
+            font-weight: bold
+            color: #FF4141
+            display: flex
+            align-items: center
+            justify-content: flex-end
+            flex-direction: row
+            width: 40%
+            padding: 1vw
+            & > button
+                @include soldButton()
+
+        &-ava
+            user-select: none
+            font-family: $font
+            font-size: 10px
+            font-weight: bold
+            color: #FF4141
+            display: flex
+            align-items: center
+            justify-content: flex-end
+            flex-direction: row
+            width: 40%
+            padding: 1vw
+            & > select
+                background-color: #FFFFFF
+                border: 1px solid #0009387F
+                border-radius: 5px
+                opacity: 1
+                text-align: center
+                font-family: Poppins
+                color: #0009387F
+                opacity: 1
+                width: 16%
+                height: 3vh
+                width: 40px
+                & > option
+                    font-size: 12px
+            & > button
+                @include avaButton()
+        @include breakpoint(phone)
+            width: 89%
+            &-left
+                width: 90%
+                display: flex
+                flex-direction: column
+                align-items: flex-start
+                & > h5
+                    display: flex
+                    flex-direction: column
+                    align-items: flex-start
+                & > h6
+                    display: none
+                &::before
+                    width: 0
+                & > h5 > p
+                    letter-spacing: 0px
+                    background: none
+                    padding: 0
+                    margin: 0            
+
+            &-sold
+                width: 24%
+                & > p
+                   display: none
+                & > h5 > p
+                    letter-spacing: 0px
+                    background: none
+            &-ava
+                width: 24%
+                & > select
+                    display: none             
+    &__description
+        @include font()
+        font-weight: 200
+        font-size: 13px
+        color: #80849C
+        opacity: 1
+        width: 87%
+        @include breakpoint(phone)
+            margin-top: 1em    
+    &__images
+        margin-left: -12px
+        width: 85%
+        display: grid
+        grid-template-columns: 25% 25% 25% 25%
+        grid-template-rows: auto auto
+        gap: 5px 5px
+        grid-template-areas:  "pic-1 pic-1 pic-2 pic-3" "pic-1 pic-1 pic-4 pic-5"
+        &-a
+            grid-area: pic-1
+            width: 100%
+            height: 100%
+            border-radius: 15px 0 0 15px
+            object-fit: cover
+        &-b
+            grid-area: pic-2
+            width: 100%
+            height: 100%
+            object-fit: cover
+           
+        &-c
+            grid-area: pic-3
+            width: 100%
+            height: 8em
+            object-fit: cover
+            object-position: 0 20%
+            border-radius: 0 15px 0 0 
+        &-d
+            grid-area: pic-4
+            width: 100%
+            height: 8em
+            object-position: 0 10%
+            object-fit: cover
+                   
+        &-e
+            grid-area: pic-5
+            width: 100%
+            height: 8em
+            object-fit: cover
+            border-radius: 0 0 15px 0
+        @include breakpoint(phone)
+            margin-top: 1vh
+            grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr
+            grid-template-areas: "pic-1 pic-1 pic-1 pic-1 pic-3 pic-3 pic-3" "pic-1 pic-1 pic-1 pic-1 pic-5 pic-5 pic-5"
+            &-b, &-d
+                display: none                           
+    &__info
+        display: grid
+        width: 90%
+        grid-template-columns: 20% 40% 40%
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr
+        gap: 0px 0px
+        margin-top: 2vh
+        grid-template-areas: "logo place place" "logo place place" "logo place place" "logo logo1 logo2" "logo logo3 logo4" "logo logo5 logo6"
+        &-logo
+            grid-area: logo
+            & > img
+                width: 90%
+                height: auto
+        &-place
+            grid-area: place
+            @include imageAndTexDescription()
+            &-pacha
+                display: none
+        &-logo1
+            grid-area: logo1
+            @include imageAndTexDescription()
+            margin-top: 1vh
+            @include breakpoint(phone)
+                margin-top: 3vh
+            
+        &-logo2
+            grid-area: logo2
+            @include imageAndTexDescription()
+            margin-top: 1vh
+        &-logo3
+            grid-area: logo3
+            @include imageAndTexDescription()
+            margin-top: 3vh
+        &-logo4
+            grid-area: logo4
+            @include imageAndTexDescription()
+            margin-top: 3vh
+        &-logo5
+            grid-area: logo5
+            @include imageAndTexDescription()
+            margin-top: 3vh
+        &-logo6
+            grid-area: logo6
+            @include imageAndTexDescription()
+            margin-top: 3vh
+        @include breakpoint(phone)
+            display: flex
+            flex-direction: column
+            width: 83%
+            &-logo
+                display: none
+            &-place > img
+                width: 50px
+                height: auto
+                margin: 0
+                padding: 0
+            &-place-pacha
+                display: flex
+            &-place-icon
+                display: none
+    &__location
+        width: 87%
+        height: auto
+        margin: 2vh
+        @include breakpoint(phone)
+            box-shadow: 0px 3px 6px #6B75FF29
+
+.stock
+    & > h5 > p
+        display: none
+
+.footer
+    top: 0px
+    left: 0px
+    width: 100vw
+    height: 25%
+    background-color: #000938
+    opacity: 1
+    display: flex
+    justify-content: center
+    align-items: baseline
+    @include font()
+    font-size: 10px
+    color: #ffffff
+    & > * 
+        margin: 3em
+    &__contact
+        display: flex
+        flex-direction: column
+        align-items: flex-start
+        & > *
+            margin: 0.3em
+            padding: 0
+        & > a
+            color: #ffffff
+            text-decoration: none
+    &__map
+        display: flex
+        flex-direction: column
+        align-items: flex-start
+        & > *
+            margin: 0.3em
+            padding: 0
+        & > a
+            color: #ffffff
+            text-decoration: none
+       
+        
+
+    &__pay
+        width: 11vw
+        & > img
+            width: 100%
+
+    @include breakpoint(phone)
+        display: flex
+        flex-direction: column
+        align-items: flex-start
+        font-size: 12px
+        & > *
+            margin: 3px
+        &__pay
+            display: none
+
+.brand
+    @include font()
+    color: #ffffff
+    width: 100vw
+    background-color: #000938
+    display: flex
+    justify-content: center
+    align-items: center
+    font-size: 10px
+    height: 8vh
+    & > img
+        width: 10vw
+        margin-left: 1vh
+    @include breakpoint(phone)
+        padding: 10px
+        font-size: 12px
+        & > img
+            width: 26vw
+    
+
+   

@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;500;600&display=swap')
+
+@mixin font()
+    font-family: Poppins
+    font-weight: 300   
+
+@mixin button()
+    border-style: none
+    width: 70px
+    height: 30px
+    font-family: $font
+    color: #FFFFFF
+    border-radius: 5px
+    opacity: 1
+    font-size: 12px
+    margin-left: 2vw
+    outline: none
+    
+@mixin soldButton()
+    @include button()
+    background-color: #0009387F
+    
+
+@mixin avaButton()
+    @include button()
+    background-color: #6B75FF
+    &:hover
+        background-color: #9DD19C
+    &:active
+        background-color: #50D44D
+
+@mixin imageAndTexDescription()
+    @include font()
+    font-weight: 200
+    font-size: 13px
+    color: #80849C
+    opacity: 1
+    display: flex
+    justify-content: flex-start
+    align-items: flex-start
+    & > img
+        width: 20px
+        height: auto
+        margin-left: 10px
+        margin-right: 20px
+    & > p
+        margin: 0
+        padding: 0
+
+@mixin breakpoint($size)
+    @if $size == phone
+        @media screen and (min-width: 320px) and (max-width: 414px) 
+            @content
+
+$font-description-color: #0009387F
+$font: Poppins
+$background-color: #F7FAFF

@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="shortcut icon" href="./assets/favicon.ico" type="image/x-icon">
+        <link rel="stylesheet" href="styles.css">
+        <title>PartyAdvisor</title>
+    </head>
+    <body>
+        <section class="wrapper">
+            <div class="navbar">
+                <div class="navbar__left">
+                    <img src="./assets/Logo Negre Actualitzat@2x.png" alt="PartyAdvisor">
+                    <div class="navbar__form">
+                        <img src="./assets/search-line.png" alt="lupa" onclick=getFocus()>
+                        <input id="search" type="text" placeholder="¿Qué evento estás buscando?">
+                    </div>
+                </div>
+                <nav class="navbar__right">
+                    <input type="checkbox" name="burger" id="menu">
+                    <label for="menu">☰</label>
+                    <ul>
+                        <li>
+                            <a href="#">
+                                <img src="./assets/global-line.png" alt="">
+                                Español
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">Mis tickets</a>
+                        </li>
+                        <li>
+                            <a href="#">Inicia sesión</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="header">
+                <img src="./assets/Image 84.png" alt="djs">
+            </div>
+            <div class="content">
+                <div class="content__header">
+                    <img src="./assets/pacha domingo.png" alt="">
+                </div>
+                <div class="content__event">
+                    <div class="content__event-logo">
+                        <img src="./assets/pacha_barcelona.png" alt="pacha barcelona">
+                    </div>
+                    <div class="content__event-left">
+                        <h3>Sven Väth World Tour</h3>
+                        <p>en Pacha Barcelona</p>
+                    </div>
+                    <div class="content__event-right">
+                        <p>SÁB, 31 OCT 2020 | 23:59 - 06:00</p>
+                        <a href="#">
+                            <img src="./assets/share-box-line.png" alt="">
+                            compartir
+                        </a>
+                    </div>
+                </div>
+                <h3 class="content__title">Entradas</h3>
+                <div class="content__card">
+                    <div class="content__card-left">
+                        <h5>LISTA DE INVITADOS
+                            <p>AGOTADO</p>
+                        </h5> 
+                        <h6>Acceso gratuito hasta las 2:00h</h6>
+                        <p>*Esta entrada es sin límite horario y sin colas</p>
+                    </div>
+                    <div class="content__card-sold">
+                        <p>AGOTADO</p>
+                        <button disabled>GRATIS</button>
+                    </div>
+                </div>
+                <div class="content__card">
+                    <div class="content__card-left">
+                        <h5>
+                            1ST RELEASE
+                            <p> Sólo quedan 10 entradas</p>
+                        </h5>
+                        <h6>
+                            Las ventas finalizan el 31 de oct.
+                        </br> 2020 Table + Bottle per person. Front of the stage. 60.000 visitors 2019 (until September). CERTIFICATE OF EXCELLENCE 2018 & 2019</h6>
+                    <p>*Esta entrada es sin límite horario y sin colas</p>
+                </div>
+                <div class="content__card-ava">
+                    <select name="quantity">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                    </select>
+                    <button>15€</button>
+                </div>
+            </div>
+            <div class="content__card">
+                <div class="content__card-left">
+                    <h5>
+                        2ND RELEASE
+                        <p> Sólo quedan 10 entradas</p>
+                    </h5>
+                    <h6>Entrada con una copa incluyda y con acceso sin cola toda la noche</h6>
+                    <p>*Esta entrada es sin límite horario y sin colas</p>
+                </div>
+                <div class="content__card-ava">
+                    <select name="quantity">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                    </select>
+                    <button>20,50€</button>
+                </div>
+            </div>
+            <div class="content__card">
+                <div class="content__card-left stock">
+                    <h5>
+                        3ND RELEASE
+                        <p> Sólo quedan 10 entradas</p>
+                    </h5>
+                    <h6>Entrada con una copa incluyda y con acceso sin cola toda la noche</h6>
+                    <p>*Esta entrada es sin límite horario y sin colas</p>
+                </div>
+                <div class="content__card-ava">
+                    <select name="quantity">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                    </select>
+                    <button>25€</button>
+                </div>
+            </div>
+            <h3 class="content__title">Descripción del evento</h3>
+            <p class="content__description">
+                Off Week is probably one of the best weeks of the year if Techno music is a must in your day-to-day. Pacha Barcelona offers you some of the best parties well knowed around the world.
+                <br>
+                <br>
+                Few labels have established themselves as solidly and definitively as Matthias Tanzmann and André Quaas’ Moon Harbour. Since the turn of the millennium it has been a bastion of deep and tech house quality that has not moved with the times, but has defined them ahead of trend. Through a carefully curated series of EPs and LPs, the label has fomented its own close-knit family that expands and contracts with careful consideration.
+                <br>
+                <br>
+                In collaboration with Sight
+            </p>
+            <h3 class="content__title">
+                Momentos
+                <a href="#">
+                    <img src="./assets/function-line.png" alt="">
+                    Mostrar todas las fotos
+                </a>
+            </h3>
+            <div class="content__images">
+                <img class="content__images-a" src="./assets/pic-1.jpeg" alt="party">
+                <img class="content__images-b" src="./assets/pic-2.jpeg" alt="bottle">
+                <img class="content__images-c" src="./assets/pic-3.jpeg" alt="singer">
+                <img class="content__images-d" src="./assets/pic-4.jpeg" alt="singer with crowd">
+                <img class="content__images-e" src="./assets/pic-5.jpeg" alt="singer with crowd">
+            </div>
+            <br>
+            <h3 class="content__title">Información del organizador</h3>
+            <div class="content__info">
+                <div class="content__info-logo">
+                    <img src="./assets/pacha_barcelona.png" alt="">
+                </div>
+                <div class="content__info-place">
+                    <img class="content__info-place-icon" src="./assets/information-line.png" alt="info">
+                    <img class="content__info-place-pacha" src="./assets/pacha_barcelona.png" alt="">
+                    <p>
+                        <b>Carpe Diem Lounge Club (CDLC)</b>
+                        ofrece una mezcla exclusiva de la mejor música con la gente más chic y las bebidas más premium como el Champagne Dom Pérignon.
+                        <br>
+                        <br>
+                        Disfruta de la decoración exótica de los 4 zonas VIP, inspirada en Marruecos y Bali. Baila toda la noche con los mejores DJ's internacionales.
+                        <br>
+                        <br>
+                        La noche es tuya en Carpe Diem.
+                    </p>
+                </div>
+                <div class="content__info-logo1">
+                    <img src="./assets/music-2-fill.png" alt="">
+                    <p>
+                        <b>Música</b>
+                        <br>
+                        Sesión Deep House & Tech House de la mano de Camilo Franco
+                    </p>
+                </div>
+                <div class="content__info-logo2">
+                    <img src="./assets/timer-2-line.png" alt="">
+                    <p>
+                        <b>Hoario</b>
+                        <br>
+                        Lunes - Domingo: 12:00h - 04:00h
+                    </p>
+                </div>
+                <div class="content__info-logo3">
+                    <img src="./assets/ambience-line.png" alt="">
+                    <p>
+                        <b>Ambiente</b>
+                        <br>
+                        Internacional · Estudiante
+                    </p>
+                </div>
+                <div class="content__info-logo4">
+                    <img src="./assets/restaurant-2-fill.png" alt="">
+                    <p>
+                        <b>Comida</b>
+                        <br>
+                        Lunes - Domingo: 12:00h - 04:00h
+                    </p>
+                </div>
+                <div class="content__info-logo5">
+                    <img src="./assets/money-dollar-circle-line.png" alt="">
+                    <p>
+                        <b>Precios</b>
+                        <br>
+                        Copas desde 10€ Refrescos desde 3€
+                    </p>
+                </div>
+                <div class="content__info-logo6">
+                    <img src="./assets/shirt-line.png" alt="">
+                    <p>
+                        <b>Dresscode</b>
+                        <br>
+                        Elegant
+                    </p>
+                </div>
+            </div>
+            <h3 class="content__title">Ubicación</h3>
+            <img class="content__location" src="./assets/location.png" alt="location">
+        </div>
+        <div class="footer">
+            <div class="footer__contact">
+                <p>
+                    <b>Información y contacto</b>
+                </p>
+                <a href="#">Escribenos</a>
+                <a href="#">Sobre nosotros</a>
+            </div>
+            <div class="footer__map">
+                <p>
+                    <b>Mapa del sitio</b>
+                </p>
+                <a href="#">Inicio</a>
+                <a href="#">Política de privacidad</a>
+                <a href="#">Términos y condiciones</a>
+            </div>
+            <div class="footer__pay">
+                <p>
+                    <b> Tipos de pago</b>
+                </p>
+                <img src="./assets/payment.png" alt="">
+            </div>
+        </div>
+        <div class="brand">
+            <p>Powered by</p>
+            <img src="./assets/Logo Premiumguest PNG@2x.png" alt="">
+        </div>
+        <script type='text/javascript'>
+            function getFocus(){
+              document.getElementById('search').focus()
+               }
+            
+        </script>
+    </section>
+</body>
+</html>
