@@ -317,7 +317,9 @@
   opacity: 0.8;
   display: inline-block;
   width: 87%;
+  font-size: 22px;
   margin-top: 2rem;
+  margin-bottom: 2vh;
 }
 .content__title > a {
   float: right;
@@ -347,7 +349,7 @@
   align-items: center;
   padding: 10px;
   position: relative;
-  margin: 1vh;
+  margin: 1vh 0 1vh 1vh;
   font-family: Poppins;
 }
 .content__card-left {
@@ -356,10 +358,11 @@
 }
 .content__card-left > h5, .content__card-left h6 {
   opacity: 0.8;
+  font-size: 16px;
 }
 .content__card-left > p {
   color: #0009387F;
-  font-size: 10px;
+  font-size: 16px;
   font-family: Poppins;
   font-weight: 300;
 }
@@ -378,14 +381,14 @@
   opacity: 1;
   background: #FFDEDE 0% 0% no-repeat padding-box;
   border-radius: 20px;
-  font-size: 10px;
+  font-size: 16px;
   padding: 1px 8px 1px 8px;
   font-weight: 400;
 }
 .content__card-left > h6 {
   font-family: Poppins;
   font-weight: 300;
-  font-size: 13px;
+  font-size: 16px;
 }
 .content__card-left:before {
   content: "";
@@ -400,7 +403,7 @@
 }
 .content__card-sold {
   font-family: Poppins;
-  font-size: 10px;
+  font-size: 16px;
   font-weight: bold;
   color: #FF4141;
   display: flex;
@@ -418,7 +421,7 @@
   color: #FFFFFF;
   border-radius: 5px;
   opacity: 1;
-  font-size: 12px;
+  font-size: 16px;
   margin-left: 2vw;
   outline: none;
   background-color: #0009387F;
@@ -448,9 +451,7 @@
   width: 16%;
   height: 3vh;
   width: 40px;
-}
-.content__card-ava > select > option {
-  font-size: 12px;
+  font-size: 16px;
 }
 .content__card-ava > button {
   border-style: none;
@@ -460,7 +461,7 @@
   color: #FFFFFF;
   border-radius: 5px;
   opacity: 1;
-  font-size: 12px;
+  font-size: 16px;
   margin-left: 2vw;
   outline: none;
   background-color: #6B75FF;
@@ -519,7 +520,7 @@
   font-family: Poppins;
   font-weight: 300;
   font-weight: 200;
-  font-size: 13px;
+  font-size: 16px;
   color: #80849C;
   opacity: 1;
   width: 87%;
@@ -604,7 +605,7 @@
   font-family: Poppins;
   font-weight: 300;
   font-weight: 200;
-  font-size: 13px;
+  font-size: 16px;
   color: #80849C;
   opacity: 1;
   display: flex;
@@ -629,7 +630,7 @@
   font-family: Poppins;
   font-weight: 300;
   font-weight: 200;
-  font-size: 13px;
+  font-size: 16px;
   color: #80849C;
   opacity: 1;
   display: flex;
@@ -657,7 +658,7 @@
   font-family: Poppins;
   font-weight: 300;
   font-weight: 200;
-  font-size: 13px;
+  font-size: 16px;
   color: #80849C;
   opacity: 1;
   display: flex;
@@ -680,7 +681,7 @@
   font-family: Poppins;
   font-weight: 300;
   font-weight: 200;
-  font-size: 13px;
+  font-size: 16px;
   color: #80849C;
   opacity: 1;
   display: flex;
@@ -703,7 +704,7 @@
   font-family: Poppins;
   font-weight: 300;
   font-weight: 200;
-  font-size: 13px;
+  font-size: 16px;
   color: #80849C;
   opacity: 1;
   display: flex;
@@ -726,7 +727,7 @@
   font-family: Poppins;
   font-weight: 300;
   font-weight: 200;
-  font-size: 13px;
+  font-size: 16px;
   color: #80849C;
   opacity: 1;
   display: flex;
@@ -749,7 +750,7 @@
   font-family: Poppins;
   font-weight: 300;
   font-weight: 200;
-  font-size: 13px;
+  font-size: 16px;
   color: #80849C;
   opacity: 1;
   display: flex;
@@ -816,7 +817,7 @@
   align-items: baseline;
   font-family: Poppins;
   font-weight: 300;
-  font-size: 10px;
+  font-size: 15px;
   color: #ffffff;
 }
 .footer > * {
