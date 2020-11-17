@@ -255,7 +255,9 @@
         opacity: 0.8
         display: inline-block
         width: 87%
+        font-size: $font-title-size
         margin-top: 2rem
+        margin-bottom: 2vh
         & > a
             float: right
             display: flex
@@ -281,16 +283,17 @@
         align-items: center
         padding: 10px
         position: relative
-        margin: 1vh
+        margin: 1vh 0 1vh 1vh
         font-family: $font
         &-left
             width: 60%
             user-select: none
             & > h5,h6
                 opacity: 0.8
+                font-size: $font-card-title-size
             & > p
                 color: $font-description-color
-                font-size: 10px
+                font-size: $font-description-size
                 @include font()
             & > *
                 margin: 0.5vh   
@@ -305,12 +308,13 @@
                     opacity: 1
                     background: #FFDEDE 0% 0% no-repeat padding-box
                     border-radius: 20px
-                    font-size: 10px    
+                    font-size: $font-description-size    
                     padding: 1px 8px 1px 8px     
                     font-weight: 400  
+                
             & > h6
                  @include font()
-                 font-size: 13px
+                 font-size: $font-card-title-size
         &-left:before
             content: ''
             height: 100%
@@ -324,7 +328,7 @@
 
         &-sold
             font-family: $font
-            font-size: 10px
+            font-size: $font-description-size
             font-weight: bold
             color: #FF4141
             display: flex
@@ -360,8 +364,8 @@
                 width: 16%
                 height: 3vh
                 width: 40px
-                & > option
-                    font-size: 12px
+                font-size: $font-option-size
+                // & > option
             & > button
                 @include avaButton()
         @include breakpoint(phone)
@@ -399,7 +403,7 @@
     &__description
         @include font()
         font-weight: 200
-        font-size: 13px
+        font-size: $font-description-size
         color: #80849C
         opacity: 1
         width: 87%
@@ -533,7 +537,7 @@
     justify-content: center
     align-items: baseline
     @include font()
-    font-size: 10px
+    font-size: $font-link-size
     color: #ffffff
     & > * 
         margin: 3em
