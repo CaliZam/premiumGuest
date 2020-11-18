@@ -82,7 +82,7 @@
                     text-decoration: none
                     @include font()
                     color: $font-description-color
-                    font-size: 14px
+                    font-size: $font-link-size
                     text-align: center
                     display: flex
                     align-items: center
@@ -198,12 +198,17 @@
             width: 40%
             & > h3
                 margin: 0
-                font-size: 18px
+                font-size: 28px
+                font-weight: bold
+                @include breakpoint(phone)
+                    font-size: 22px
             & > p
                 font-size: 14px
                 color: #0009387F
                 font-weight: 500
                 margin-top: 0.6rem
+                font-size: $font-title-size
+
         &-right
             float: right
             width: 45%
@@ -212,6 +217,7 @@
             & > p
                 font-size: 12px
                 margin-top: 0.6em
+                font-size: $font-description-size
             & > a
                 text-decoration: none
                 margin-top: 1em
@@ -220,6 +226,7 @@
                 display: flex
                 align-items: center
                 justify-content: flex-end
+                font-size: $font-link-size
                 & > img
                     height: 12px
                     width: 12px
@@ -238,15 +245,21 @@
                 justify-content: space-between
                 align-items: flex-end
                 text-align: right
+                font-size: $font-link-movil-size
                 & > p
                     padding-right: 10%
+                    font-size: $font-description-movil-size 
+                & > a
+                    font-size: $font-link-movil-size
             &-left
                 display: flex
                 width: 88%
                 align-items: flex-start
                 margin-top: 1vh
                 & > p
-                    margin: 0      
+                    margin: 0     
+                    font-size: $font-link-movil-size 
+                    
     &__title
         text-align: left
         font: normal normal 600 16px/17px Poppins
@@ -264,7 +277,7 @@
             align-items: center
             text-decoration: none
             color: $font-description-color
-            font-size: 10px
+            font-size: 14px
             font-weight: 300
             &:hover
                 color: #6B75FF
@@ -587,10 +600,10 @@
     display: flex
     justify-content: center
     align-items: center
-    font-size: 10px
+    font-size: 15px
     height: 8vh
     & > img
-        width: 10vw
+        width: 13vw
         margin-left: 1vh
     @include breakpoint(phone)
         padding: 10px
