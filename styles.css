@@ -122,6 +122,8 @@
 }
 .navbar__right > input, .navbar__right label {
   display: none;
+  height: 0;
+  width: 0;
 }
 @media screen and (min-width: 320px) and (max-width: 414px) {
   .navbar__right {
@@ -140,6 +142,8 @@
     display: none;
   }
   .navbar__right > input:checked ~ ul {
+    transition-duration: 1s;
+    transition-timing-function: linear;
     display: flex;
     flex-direction: column;
     align-items: flex-end;
